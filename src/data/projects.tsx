@@ -38,15 +38,38 @@ const projects = [
     gallery: [
       {
         src: '/images/projects/tendergo/dashboard.png',
-        title: 'Application Dashboard',
+        title: 'Application Dashboard for Admin',
+        isMobile: false,
       },
       {
-        src: '/images/projects/tendergo/tenders.png',
-        title: 'Tender Management',
+        src: '/images/projects/tendergo/pdf.png',
+        title: 'PDF Report',
+        isMobile: false,
+
       },
       {
-        src: '/images/projects/tendergo/bids.png',
-        title: 'Bidding System',
+        src: '/images/projects/tendergo/lista.png',
+        title: 'Tender List',
+        isMobile: true,
+
+      },
+      {
+        src: '/images/projects/tendergo/notif.png',
+        title: 'Notifications',
+        isMobile: true,
+
+      },
+      {
+        src: '/images/projects/tendergo/recommend.png',
+        title: 'Recommendations',
+        isMobile: true,
+
+      },
+      {
+        src: '/images/projects/tendergo/post.png',
+        title: 'Tender Posting',
+        isMobile: true,
+
       },
     ],
 
@@ -89,10 +112,13 @@ const projects = [
       {
         src: '/images/projects/estatepredict/form.png',
         title: 'Property Input Form',
+        isMobile: false,
       },
       {
         src: '/images/projects/estatepredict/prediction.png',
         title: 'Price Prediction',
+        isMobile: false,
+
       },
     ],
 
@@ -134,10 +160,14 @@ const projects = [
       {
         src: '/images/projects/autoshop/dashboard.png',
         title: 'Application Interface',
+        isMobile: false,
+
       },
       {
         src: '/images/projects/autoshop/products.png',
         title: 'Application Features',
+        isMobile: false,
+
       },
     ],
 

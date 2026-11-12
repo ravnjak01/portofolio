@@ -182,35 +182,44 @@ const showNext = () => {
             </span>
           </div>
 
+            {}
           <div className="grid gap-6 sm:grid-cols-2">
 
-            {project.gallery.map((image, index) => (
-              <button
-                key={image.src}
-                onClick={() => setActiveImage(index)}
-                className="group overflow-hidden rounded-xl border border-white/10 bg-[#181A1F] text-left transition hover:border-lime-400/40"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={image.src}
-                    alt={image.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
-                  />
-                </div>
+            {project.gallery.map((image, index) => {
+      const isMobile = image.isMobile; 
 
-                <div className="flex items-center justify-between p-4">
-                  <span className="text-sm text-zinc-300">
-                    {image.title}
-                  </span>
+      return (
+        <button
+          key={image.src}
+          onClick={() => setActiveImage(index)}
+          className="group overflow-hidden rounded-xl border border-white/10 bg-[#181A1F] text-left transition hover:border-lime-400/40 flex flex-col justify-between"
+        >
+          <div className={`overflow-hidden flex items-center justify-center bg-black/40 ${isMobile ? 'aspect-[9/16] max-h-[450px] p-4' : 'aspect-video'}`}>
+            <img
+              src={image.src}
+              alt={image.title}
+              loading="lazy"
+              className={`transition duration-500 group-hover:scale-105 ${
+                isMobile 
+                  ? 'h-full w-auto object-contain rounded-lg shadow-xl border border-white/10' // Mobilne slike izgledaju kao pravi telefon
+                  : 'h-full w-full object-cover object-top' // Desktop slike ostaju preko cijelog okvira
+              }`}
+            />
+          </div>
 
-                  <ArrowUpRight
-                    size={17}
-                    className="text-zinc-500 transition group-hover:text-lime-400"
-                  />
-                </div>
-              </button>
-            ))}
+          <div className="flex items-center justify-between p-4 mt-auto border-t border-white/5">
+            <span className="text-sm text-zinc-300">
+              {image.title}
+            </span>
+
+            <ArrowUpRight
+              size={17}
+              className="text-zinc-500 transition group-hover:text-lime-400"
+            />
+          </div>
+        </button>
+      )
+    })}
 
           </div>
         </section>
