@@ -25,7 +25,7 @@ function Projects() {
               </h2>
 
               <p className="mt-5 max-w-xl leading-7 text-zinc-400">
-                A collection of projects I've built, exploring
+                A collection of some projects I've built, exploring
                 full-stack development, backend systems and
                 machine learning.
               </p>

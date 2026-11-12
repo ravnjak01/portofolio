@@ -32,8 +32,13 @@ const projects = [
       'Mobile application and desktop administration',
     ],
 
-    architecture:
-      'ASP.NET Core Web API, Entity Framework Core, SQL Server, Flutter applications and RabbitMQ background processing.',
+    architecture: [
+  { layer: 'Client', description: 'Flutter mobile application and desktop administration' },
+  { layer: 'API', description: 'ASP.NET Core Web API with role-based authorization' },
+  { layer: 'Data', description: 'SQL Server accessed through Entity Framework Core' },
+  { layer: 'Messaging', description: 'RabbitMQ for real-time notifications' },
+  { layer: 'ML', description: 'ML.NET content-based recommendations' },
+],
 
     gallery: [
       {
@@ -105,8 +110,12 @@ const projects = [
       'Python-based model training and prediction',
     ],
 
-    architecture:
-      'React frontend, ASP.NET Core Web API, SQL Server database and Python machine learning component.',
+architecture: [
+  { layer: 'Client', description: 'React frontend with a property input form' },
+  { layer: 'API', description: 'ASP.NET Core Web API connecting the frontend to the model' },
+  { layer: 'Data', description: 'SQL Server accessed through Entity Framework Core' },
+  { layer: 'ML', description: 'Python component for model training and price prediction' },
+],
 
     gallery: [
       {
@@ -153,19 +162,40 @@ const projects = [
       'JWT-based authentication',
     ],
 
-    architecture:
-      'Angular frontend, ASP.NET Core backend, REST APIs and SQL Server database.',
+   architecture: [
+  { layer: 'Client', description: 'Angular frontend written in TypeScript' },
+  { layer: 'API', description: 'ASP.NET Core REST API with JWT authentication' },
+  { layer: 'Data', description: 'SQL Server accessed through Entity Framework Core' },
+],
 
     gallery: [
       {
-        src: '/images/projects/autoshop/dashboard.png',
-        title: 'Application Interface',
+        src: '/images/projects/autoshop/administracija.png',
+        title: 'Administration Dashboard',
         isMobile: false,
 
       },
       {
-        src: '/images/projects/autoshop/products.png',
-        title: 'Application Features',
+        src: '/images/projects/autoshop/lista_autoshop.png',
+        title: 'Products List',
+        isMobile: false,
+
+      },
+      {
+        src: '/images/projects/autoshop/korpa.png',
+        title: 'Shopping Cart',
+        isMobile: false,
+
+      },
+       {
+        src: '/images/projects/autoshop/checkout1.png',
+        title: 'Checkout Process',
+        isMobile: false,
+
+      },
+       {
+        src: '/images/projects/autoshop/checkout2.png',
+        title: 'Checkout Process',
         isMobile: false,
 
       },

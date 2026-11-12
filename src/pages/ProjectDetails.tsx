@@ -157,11 +157,21 @@ const showNext = () => {
             ARCHITECTURE
           </p>
 
-          <div className="rounded-2xl border border-white/10 bg-[#181A1F] p-6 sm:p-8">
-            <p className="leading-8 text-zinc-300">
-              {project.architecture}
-            </p>
-          </div>
+          <div className="space-y-3">
+  {project.architecture.map((item) => (
+    <div
+      key={item.layer}
+      className="flex flex-col gap-1 rounded-xl border border-white/10 bg-[#181A1F] p-5 sm:flex-row sm:items-center sm:gap-6"
+    >
+      <span className="w-28 shrink-0 text-xs font-medium tracking-[0.2em] text-lime-400">
+        {item.layer.toUpperCase()}
+      </span>
+      <p className="text-sm leading-7 text-zinc-300">
+        {item.description}
+      </p>
+    </div>
+  ))}
+</div>
         </section>
 
         {/* Gallery */}
